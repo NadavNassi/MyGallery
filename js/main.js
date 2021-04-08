@@ -1,5 +1,6 @@
 $(document).ready(onInit);
 $('.btn-contact').click(event, onContactClick);
+$('.linkedin-btn').click($('.linkedin-btn').attr('href'), changeUrl)
 
 
 function onInit() {
@@ -62,6 +63,6 @@ function onContactClick(ev) {
 }
 
 function changeUrl(projUrl) {
-    console.log('projUrl', projUrl)
+    event.preventDefault();
     window.open(projUrl.data)
 }
