@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Store</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="onInit()">
+    <section class="main-container">
+        <h1>Welcome to my books store</h1>
+        <secction class="books-container">
+            <button class="add-btn" onclick="onAddModal()">Create new book</button>
+            <table class="books-table" border="1"></table>
+        </secction>
+        <section class="modal">
+            <div class="read-container">
+                <button class="close-modal-btn" onclick="onCloseModal()">X</button>
+                <h3></h3>
+                <img src="" />
+                <p></p>
+                <div class="rate"></div>
+            </div>
+            <form class="add-container" onsubmit="onAddBook(event)">
+                <input type="text" name="bookName" placeholder="Name of book">
+                <input type="number" name="bookPrice" placeholder="price of book">
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </section>
+
+    <script src="js/service/storage.service.js"></script>
+    <script src="js/service/books.service.js"></script>
+    <script src="js/books-controller.js"></script>
+</body>
+
+</html>

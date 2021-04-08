@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINESWEEPER</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+
+<body onload="init()">
+    <h1>MINE SWEEPER</h1>
+    <table class="main">
+        <tr>
+            <td class="left">
+                <div class="hints">
+
+                </div>
+                <div class="safe">
+
+                </div>
+                <div class="difficulty">
+                    <h3>What difficulty?</h3>
+                    <input type="radio" name="difficulty" id="4" onclick="getSize(4, 2), restart()" checked> <label
+                        for="4">4 X 4</label>
+                    <input type="radio" name="difficulty" id="8" onclick="getSize(8, 12), restart()"> <label for="8">8 X
+                        8</label>
+                    <input type="radio" name="difficulty" id="12" onclick="getSize(12, 30), restart()"> <label
+                        for="12">12 X 12</label>
+                    <input type="radio" name="difficulty" id="costume" onclick="getSize(12, 30), restart()"> <label
+                        for="costume">Costume game</label>
+                </div>
+                <h3>Our best player!</h3>
+                <div class="high-score"></div>
+            </td>
+            <td class="right">
+                <div class="smiley"><i class=smiley onclick="restart()">😊</i></div>
+                <div class="board"></div>
+                <div class="asantiols">
+                    <table>
+                        <tr>
+                            <td>time</td>
+                            <td>life remaines</td>
+                            <td>flags</td>
+                        </tr>
+                        <tr>
+                            <td class="time">0</td>
+                            <td class="life"></td>
+                            <td class="marked">00</td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+
+    <script src="js/globals.js"></script>
+    <script src="js/leadBoard.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/cells.js"></script>
+    <script src="js/mines.js"></script>
+    <script src="js/hints.js"></script>
+    <script src="js/game.js"></script>
+</body>
+
+</html>
